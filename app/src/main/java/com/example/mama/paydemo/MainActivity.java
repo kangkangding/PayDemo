@@ -34,10 +34,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         btn_pay = (Button) findViewById(R.id.btn_pay);
         tv_text = (TextView) findViewById(R.id.tv_text);
-
         btn_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
     //获取服务端参数
     public void getPayData(){
-        String url = "yoururl?id=1&total=0.01";
+        String url = "yoururl";
         OkHttpClient okHttpClient = new OkHttpClient();
         Request request = new Request.Builder().url(url).build();
         Call call = okHttpClient.newCall(request);
