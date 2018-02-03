@@ -1,6 +1,5 @@
 package com.example.mama.paydemo;
 
-import android.database.CursorJoiner;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -102,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             switch (msg.what){
                 case SDK_PAY_FLAG:
+                    //获取返回的参数
                     Map<String ,String> map = (Map<String,String>) msg.obj;
                     tv_text.setText(map.toString());
                     Toast.makeText(MainActivity.this, "::::::",Toast.LENGTH_LONG).show();
