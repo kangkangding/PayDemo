@@ -26,6 +26,7 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
 
+    //handler标志code
     private static final int SDK_PAY_FLAG = 0xf1;
     private TextView tv_text;
     private Button btn_pay;
